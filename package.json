@@ -1,20 +1,43 @@
 {
   "name": "ou-react-hooks",
+  "author": {
+    "name": "ouweicong",
+    "email": "1209656158@qq.com"
+  },
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "main": "dist/my-library.umd.js",
+  "module": "dist/my-library.es.js",
+  "types": "dist/types/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "keywords": [
+    "react",
+    "hooks",
+    "react-hooks"
+  ],
+  "files": [
+    "dist",
+    "src"
+  ],
+  "homepage": "https://github.com/ouweicong/ou-react-hooks",
+  "engines": {
+    "node": ">=18.x"
+  },
   "dependencies": {
+    "lodash": "^4.17.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
+    "@types/lodash": "^4.17.13",
+    "@types/node": "^22.10.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react-swc": "^3.5.0",

@@ -1,7 +1,23 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node", // 推荐使用 node 模块解析策略
+    "declaration": true, // 启用类型声明文件生成
+    "declarationDir": "./dist/types", // 声明文件输出目录
+    "jsx": "react-jsx", // 对于 React 项目
+    "strict": true, // 启用严格类型检查
+    "baseUrl": ".", // 根目录
+    "paths": {
+      "@/*": ["src/*"] // 如果使用路径别名
+    }
+  },
+  "include": ["src", "doc", "./**/*.ts"],
+  "exclude": ["node_modules/**/*"]
 }
