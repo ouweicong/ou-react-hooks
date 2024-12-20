@@ -6,6 +6,12 @@ import path from "path";
 export default defineConfig({
   plugins: [react()],
   root: "doc",
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "doc"),
+      "@src": path.resolve(__dirname, "src"),
+    },
+  },
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"), // 指定库的入口文件

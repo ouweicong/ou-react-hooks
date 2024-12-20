@@ -56,9 +56,14 @@ function observer(
         : res;
     },
     set: function (target, key, val) {
-      const ret = Reflect.set(target, key, val);
-      cb();
-      return ret;
+      if (key === "__update") {
+        console.log("sadjhsaldsad", key);
+        return true;
+      } else {
+        const ret = Reflect.set(target, key, val);
+        cb();
+        return ret;
+      }
     },
     deleteProperty: function (target, key) {
       const ret = Reflect.deleteProperty(target, key);
