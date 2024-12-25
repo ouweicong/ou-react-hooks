@@ -7,8 +7,8 @@
   "private": false,
   "version": "1.0.0",
   "type": "module",
-  "main": "./dist/my-library.umd.js",
-  "module": "./dist/my-library.es.js",
+  "main": "./dist/ou-react-hooks.umd.js",
+  "module": "./dist/ou-react-hooks.es.js",
   "types": "./dist/types/index.d.ts",
   "scripts": {
     "dev": "vite",
