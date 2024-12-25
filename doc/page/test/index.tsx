@@ -1,7 +1,8 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import style from "./style.scss";
 import useReactReactive from "@src/useReactReactive";
 import ParentItem from "./component/parentItem";
+import { proxyUpdateMap } from "@src/useInitProxyUpdate";
 
 interface IProps {}
 
@@ -34,8 +35,20 @@ const Test: FC<IProps> = ({}: IProps) => {
       },
     ],
   });
+
+  useEffect(() => {
+    console.log("salkdjsalkdjlsakdsad");
+  }, [dataList]);
   return (
     <div style={{ padding: "10px" }}>
+      <div onClick={() => console.log(dataList.res, proxyUpdateMap)}>show</div>
+      <div
+        onClick={() =>
+          (dataList.res[1].children[1].label = new Date().getTime())
+        }
+      >
+        change
+      </div>
       <ParentItem data={dataList.res} />
     </div>
   );

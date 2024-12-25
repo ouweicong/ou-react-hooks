@@ -1,6 +1,7 @@
 import { isPlainObject } from "lodash";
 import { useMemo } from "react";
 import useUpdateFun from "./useUpdateFun";
+import { proxyUpdateMap } from "./useInitProxyUpdate";
 
 type UseType = "ref" | "reactive";
 export function useProxyObject<T, K extends UseType>(value: T, type: K) {
@@ -56,14 +57,15 @@ function observer(
         : res;
     },
     set: function (target, key, val) {
-      if (key === "__update") {
-        console.log("sadjhsaldsad", key);
-        return true;
+      const ret = Reflect.set(target, key, val);
+      const updateMap = proxyUpdateMap.get(proxyMap.get(target) as object);
+      console.log("sakjdhsakhdkjsadsad", updateMap, target);
+      if (updateMap) {
+        updateMap.forEach((cb: () => any) => cb());
       } else {
-        const ret = Reflect.set(target, key, val);
         cb();
-        return ret;
       }
+      return ret;
     },
     deleteProperty: function (target, key) {
       const ret = Reflect.deleteProperty(target, key);

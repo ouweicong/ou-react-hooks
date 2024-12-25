@@ -15,6 +15,7 @@ export function useReactReactive<
     Object.assign(proxy, cloneDeep(defaultValue));
     update();
   }
+
   return {
     value: proxy,
     reset,
