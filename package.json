@@ -5,7 +5,7 @@
     "email": "1209656158@qq.com"
   },
   "private": false,
-  "version": "1.0.0",
+  "version": "0.0.1",
   "type": "module",
   "main": "./dist/ou-react-hooks.umd.js",
   "module": "./dist/ou-react-hooks.es.js",
