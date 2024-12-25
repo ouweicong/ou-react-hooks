@@ -1,5 +1,4 @@
 import { FC, useEffect } from "react";
-import style from "./style.scss";
 import useReactReactive from "@src/useReactReactive";
 import ParentItem from "./component/parentItem";
 import { proxyUpdateMap } from "@src/useInitProxyUpdate";

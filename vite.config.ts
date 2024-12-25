@@ -13,6 +13,7 @@ export default defineConfig({
     },
   },
   build: {
+    outDir: "../dist",
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"), // 指定库的入口文件
       formats: ["es", "umd"], // 输出的格式，支持 ESM 和 UMD

@@ -1,5 +1,4 @@
 import { FC, useMemo, useRef, useState } from "react";
-import style from "./style.scss";
 import { cloneDeep } from "lodash";
 import { routerOptions } from "@/router";
 import { Menu } from "antd";
