@@ -51,10 +51,6 @@ const ChildrenItem: FC<IProps> = ({ item, level = 1 }: IProps) => {
       {item.children && (
         <ChildrenItem item={item.children[0]} level={level + 1} />
       )}
-      {/* {item.children &&
-        item.children.map((item2: any, index: number) => (
-          <ChildrenItem key={index} item={item2} level={level + 1} />
-        ))} */}
     </div>
   );
 };
