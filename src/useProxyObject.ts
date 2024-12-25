@@ -4,14 +4,14 @@ import useUpdateFun from "./useUpdateFun";
 import { proxyUpdateMap } from "./useInitProxyUpdate";
 
 type UseType = "ref" | "reactive";
-export function useProxyObject<T, K extends UseType>(value: T, type: K) {
+export function useProxyObject<T, K extends UseType>(value, type: K) {
   // k:v 原对象:代理过的对象
   const proxyMap = useMemo(() => new WeakMap(), []);
   // k:v 代理过的对象:原对象
   const rawMap = useMemo(() => new WeakMap(), []);
 
   const update = useUpdateFun();
-  const ref = useMemo(() => {
+  const ref = useMemo<T>(() => {
     return observer(
       type === "ref" ? { value } : value,
       update,

@@ -1,11 +1,13 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "noEmit": true,
+    "noEmit": false,
+    "emitDeclarationOnly": true,
     "allowImportingTsExtensions": true,
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node", // 推荐使用 node 模块解析策略
@@ -20,6 +22,6 @@
     },
     "noImplicitAny": false // 添加这一行
   },
-  "include": ["src", "doc", "./**/*.ts"],
-  "exclude": ["node_modules/**/*"]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "doc"]
 }
