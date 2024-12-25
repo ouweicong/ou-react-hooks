@@ -12,7 +12,7 @@
   "types": "./dist/types/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --project tsconfig.build.json && vite build",
+    "build": "rimraf dist && tsc --project tsconfig.build.json && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -47,6 +47,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.12.0",
+    "rimraf": "^6.0.1",
     "sass-embedded": "^1.83.0",
     "scss": "^0.2.4",
     "typescript": "~5.6.2",
