@@ -4,7 +4,7 @@
     "name": "ouweicong",
     "email": "1209656158@qq.com"
   },
-  "private": true,
+  "private": false,
   "version": "1.0.0",
   "type": "module",
   "main": "dist/my-library.umd.js",
