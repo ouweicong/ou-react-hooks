@@ -7,9 +7,9 @@
   "private": false,
   "version": "1.0.0",
   "type": "module",
-  "main": "dist/my-library.umd.js",
-  "module": "dist/my-library.es.js",
-  "types": "dist/types/index.d.ts",
+  "main": "./dist/my-library.umd.js",
+  "module": "./dist/my-library.es.js",
+  "types": "./dist/types/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc --project tsconfig.build.json && vite build",
@@ -22,15 +22,13 @@
     "react-hooks"
   ],
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "homepage": "https://github.com/ouweicong/ou-react-hooks",
   "engines": {
     "node": ">=18.x"
   },
   "dependencies": {
-    "antd": "^5.22.5",
     "lodash": "^4.17.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -44,6 +42,7 @@
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "ahooks": "^3.8.4",
+    "antd": "^5.22.5",
     "eslint": "^9.15.0",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
